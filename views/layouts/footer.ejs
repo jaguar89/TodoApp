@@ -3,7 +3,7 @@
     let items = document.querySelectorAll('li');
     items.forEach(li => {
        li.addEventListener('click' , (event)=>{
-                 fetch(`/api/todo/${li.textContent}` , {method:'DELETE'})
+                 fetch(`/todos/${li.dataset.id}` , {method:'DELETE'})
                  .then(res=> location.reload()) 
                  .catch(err => console.log(err));
        });

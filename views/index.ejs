@@ -2,14 +2,14 @@
 
  
 <div class="container">
-    <form action="/api/todo" method="POST">
+    <form action="/todos" method="POST">
         <input type="text" name="item" id="item">
         <button type="submit">Add Item</button>
     </form>
     <ul>
         <% for(let i =0; i < data.length; i++) {%>
             
-            <li> <%= data[i].item %> </li>
+            <li data-id="<%= data[i]._id %>"> <%= data[i].item %> </li>
 
         <% } %>     
     </ul>
